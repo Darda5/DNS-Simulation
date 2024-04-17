@@ -8,6 +8,8 @@
 #include <iostream>
 #include <map>
 #include <thread>
+#include<pthread.h>
+#include<stdlib.h>
 
 std::ifstream file("local");
 using namespace std;
@@ -45,14 +47,6 @@ string split_v2(string s, string del);
 int handle_connection(int client_sock);
 string convertToString(char* a, int size);
 void updateMap(string name, string ip);
-
-#include<stdio.h>
-#include<string.h>   
-#include<sys/socket.h>
-#include<arpa/inet.h> 
-#include<unistd.h>   
-#include<pthread.h>
-#include<stdlib.h>
 
 void * tcp_handle_conn (void * client_socket);
 
